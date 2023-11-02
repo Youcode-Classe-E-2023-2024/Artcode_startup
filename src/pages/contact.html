@@ -17,6 +17,7 @@
     href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
     rel="stylesheet"
   />
+    <link rel="stylesheet" href="../style/text-white.css">
 
     <title>SwiftBooking</title>
 </head>
@@ -64,37 +65,50 @@
 
     <!-- comprendre onsubmit et submit -->
 
-    <div class="row">
-<!--        <div class="col-1"></div>-->
-        <div class="col-6">
-            <div class="container">
-                <form class="champ" onsubmit="">
+    <div class="row about-form">
+    <div class="col-1"></div>
+        <div class="col-5 form-container">
+            <div class="container2">
+                <form class="champ" onsubmit="return affiche()">
+                    <div class="box">
                     <input
                             type="text"
                             name="Champ_contact"
                             placeholder="NAME"
-                            required
+                            id="name"
+
                     />
+                    <div class="errormsg" id="sp-name"></div>
+                    </div>
+
+                    <div class="box">
                     <input
                             type="text"
                             name="Champ_contact"
                             placeholder="EMAIL"
-                            required
+                            id="email"
                     />
+                    <div class="errormsg" id="sp-email"></div>
+                    </div>
+                    <div class="box">
                     <input
                             type="text"
                             name="Champ_contact"
                             placeholder="MESSAGE"
-                            required
+                            id="message"
+
                     />
+                        <div class="errormsg" id="sp-message"></div>
+                    </div>
                     <div class="envoyer">
-                        <button type="submit" value="envoyer">Envoyer</button>
+                        <button type="submit">Envoyer</button>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="col-6">
-            <div class="container">
+        <div class="col-1"></div>
+        <div class="col-4">
+            <div class="container2">
                 <div class="about">
                     <div class="align_about">
                     <h3>About us</h3>
@@ -108,7 +122,7 @@
         </div>
 <!--        <div class="col-1"></div>-->
     </div>
-
+    </div>
 </main>
 <!-- the end of main section -->
 
@@ -118,6 +132,10 @@
 
 <script src="../script/main.js"></script>
 <script src="../script/nav-footer.js"></script>
+ <script src="../script/validator.js"></script>
+
+
+
 </body>
 </html>
 
